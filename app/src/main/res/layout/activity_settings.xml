@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Settings">
+
+    <TextView
+        android:id="@+id/TitleFirstBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:text="@string/seances"
+        android:textColor="@color/teal_200"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/blockSeancePerso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Switch
+            android:layout_marginLeft="20dp"
+            android:text="@string/seance_personnalisee"
+            android:id="@+id/switchPerso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewSeekbarTravail"
+            android:text="Durée du temps de travail (en minutes):"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewSeekBarNumberTravail"
+            android:text="60"
+            android:gravity="center"/>
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarTravail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="99"
+            android:min="1"
+            android:progress="60" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewSeekbarPause"
+            android:text="Durée du temps de pause (en minutes):"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewSeekBarNumberPause"
+                android:text="15"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarPause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="30"
+            android:min="1"
+            android:progress="15"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewSeekbarRepetition"
+            android:text="Nombre de répétition:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewSeekBarNumberRepetition"
+                android:text="2"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarRepetition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="4"
+            android:min="0"
+            android:progress="2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/blockSeancePerso">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/textSeance"
+            android:layout_marginLeft="4dp"
+            android:text="Choisir une séance :"/>
+
+        <RadioGroup
+            android:layout_marginTop="10dp"
+            android:id="@+id/listeSeance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RadioButton
+                android:id="@+id/firtSeance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4x55min travail, 4x5min pause, 4 répétitions"/>
+            <RadioButton
+                android:id="@+id/secondSeance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4x30min travail/4x2min pause, 4 répétitions"/>
+            <RadioButton
+                android:id="@+id/thirdSeance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4x80min travail/4x10min pause, 4 répétitions"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondBlock"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/teal_200"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:id="@+id/titreThirdBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Préférences"/>
+
+
+        <Switch
+            android:layout_marginLeft="20dp"
+            android:id="@+id/switchSonAlerte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jouer un son à la fin de chaque round"
+            android:layout_marginTop="20dp"
+            />
+
+        <Switch
+            android:layout_marginLeft="20dp"
+            android:id="@+id/switchNightMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activer/Désactiver le Nightmode"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRetour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retour"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thirdBlock" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

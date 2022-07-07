@@ -1,0 +1,26 @@
+<resources>
+    <!-- Reply Preference -->
+    //Séances prédéfinies
+    <string-array name="reply_entries">
+        <item>Total: 4x1h/Travail: 50min/Pause: 10min</item>
+        <item>Total: 4x30min/Travail: 25min/Pause: 5min</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>seance1</item>
+        <item>seance2</item>
+    </string-array>
+
+    //Thème Application
+    <string-array name="theme">
+        <item>Par défaut</item>
+        <item>Dark</item>
+        <item>Jaune</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>
